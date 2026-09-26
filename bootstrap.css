@@ -2106,6 +2106,8 @@ pre code {
   }
   .col-lg-10 {
     width: 83.33333333%;
+    text-align: justify;
+    text-align-last: justify;
   }
   .col-lg-9 {
     width: 75%;
