@@ -7466,3 +7466,9 @@ input[type="checkbox"]:disabled:checked:after,
 .carousel-caption h6 {
   color: inherit;
 }
+.col-lg-10 span {
+  display: block;
+  text-align: justify;
+  text-align-last: justify;
+  width: 100%;
+}
