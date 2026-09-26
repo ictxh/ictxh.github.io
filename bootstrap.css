@@ -7468,11 +7468,11 @@ input[type="checkbox"]:disabled:checked:after,
  * Local overrides for the personal page (keep last so they win)
  * ------------------------------------------------------------------ */
 
-/* Wider reading column: ~75% of a 1600px screen, 92vw below that */
+/* Wider reading column: ~68% of a 1600px screen, 92vw below that */
 @media (min-width: 1200px) {
   .container {
     width: 92vw;
-    max-width: 1200px;
+    max-width: 1080px;
   }
 
   /* Text blocks fill the container so both edges line up with the
@@ -7508,6 +7508,18 @@ p {
 .col-lg-10 ol {
   padding-left: 0;
   list-style-position: inside;
+}
+
+/* [英文] / [中文] sub-headings: a stray <br> plus the bottom margin of
+   the wrapper <p> added ~50px of blank space under each */
+.col-lg-10 span.lead + br {
+  display: none;
+}
+.col-lg-10 span.lead {
+  margin-bottom: 10px;
+}
+.col-lg-10 p:has(> span.lead) {
+  margin-bottom: 0;
 }
 
 /* Less vertical whitespace at the top and around the rules */
