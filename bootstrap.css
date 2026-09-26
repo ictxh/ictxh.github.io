@@ -2106,8 +2106,6 @@ pre code {
   }
   .col-lg-10 {
     width: 83.33333333%;
-    text-align: justify;
-    text-align-last: justify;
   }
   .col-lg-9 {
     width: 75%;
@@ -7466,9 +7464,71 @@ input[type="checkbox"]:disabled:checked:after,
 .carousel-caption h6 {
   color: inherit;
 }
+/* ------------------------------------------------------------------
+ * Local overrides for the personal page (keep last so they win)
+ * ------------------------------------------------------------------ */
+
+/* Wider reading column: ~75% of a 1600px screen, 92vw below that */
+@media (min-width: 1200px) {
+  .container {
+    width: 92vw;
+    max-width: 1200px;
+  }
+
+  /* Text blocks fill the container so both edges line up with the
+     horizontal rules and the footer instead of stopping 2 columns short */
+  .col-lg-10 {
+    width: 100%;
+  }
+}
+
+/* Tighter lines, roomier paragraphs */
+body {
+  line-height: 1.6;
+}
+p {
+  margin: 0 0 1.4em;
+}
+.col-lg-10 li {
+  margin-bottom: .5em;
+}
+
+/* Text runs to both edges. No text-align-last: it stretched short last
+   lines (headings, [英文], and the tail of every publication entry) */
+.col-lg-10 {
+  text-align: justify;
+}
 .col-lg-10 span {
   display: block;
-  text-align: justify;
-  text-align-last: justify;
   width: 100%;
+}
+
+/* Publication list: numbers inside so entries start on the same left
+   edge as the paragraphs above them */
+.col-lg-10 ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+/* Less vertical whitespace at the top and around the rules */
+#banner h3 {
+  margin-top: 0;
+}
+.page-header {
+  margin: 18px 0 12px;
+  /* the <hr> in the markup is the separator; the theme's border-bottom
+     drew a second rule 12px above it */
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+hr {
+  margin: 12px 0;
+}
+.lead {
+  margin-bottom: 12px;
+}
+
+/* Photo flush with the right edge of the text block */
+.sponsor {
+  text-align: right;
 }
